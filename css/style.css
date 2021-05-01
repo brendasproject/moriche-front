@@ -18,16 +18,16 @@ body {
 .slide {
     width: 100%;
     height: 0%;
-    background-size: cover;
-    background-position: center bottom;
+    background-size: 100%;
+    background-position: center;
     transition: height 1s;
 }
 
-.slide1 {
+.slide:nth-child(odd) {
     background-image: url('../img/test1.jpg');
 }
 
-.slide2 {
+.slide:nth-child(even) {
     background-image: url('../img/test2.jpg');
 }
 
