@@ -1,10 +1,3 @@
-let slideNumber = 1;
-let slideWrapper = document.getElementsByClassName('slide-wrapper')[0];
-let slides = document.getElementsByClassName('slide');
-let arrows = document.getElementsByClassName('arrow');
-
-arrows[0].style.opacity = '0.3';
-
 function changeSlide(n) {
 
     let displacement = 0;
@@ -56,6 +49,21 @@ function changeSlide(n) {
     }
 
 }
+
+function getEvent(e) {
+    if(e.deltaY > 0 && e.deltaY < 200) {
+        changeSlide(1);
+    } else {
+        changeSlide(-1);
+    }
+}
+
+let slideNumber = 1;
+let slideWrapper = document.getElementsByClassName('slide-wrapper')[0];
+let slides = document.getElementsByClassName('slide');
+let arrows = document.getElementsByClassName('arrow');
+
+arrows[0].style.opacity = '0.3';
 
 //Calling changeSlide for the first time
 changeSlide(-1);
